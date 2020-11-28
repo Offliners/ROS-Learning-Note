@@ -10,7 +10,6 @@
 * Website
 
   http://wiki.ros.org/
-  
   https://github.com/qboticslabs/mastering_ros
   
 * Video
@@ -19,4 +18,4 @@
 
 * Textbook
 
-  Mastering ROS for Robotics Programming (ISBN : 9781783551798)
+  [Mastering ROS for Robotics Programming]() (ISBN : 9781783551798)
