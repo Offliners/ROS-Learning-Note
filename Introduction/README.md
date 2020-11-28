@@ -6,22 +6,22 @@ Step 1. 啟動 ROS
 roscore
 ```
 
-![roscore]()
+![roscore](https://github.com/Offliners/ROS_Learning_Note/blob/main/Introduction/roscore.PNG)
 
 Step 2. 執行程式
 ```shell
-rosrun turtlesim tuttlesim_node
+rosrun turtlesim turtlesim_node
 ```
 
-![turtle]()
+![turtle](https://github.com/Offliners/ROS_Learning_Note/blob/main/Introduction/turtle.PNG)
 
 Step 3. 操控烏龜
 ```shell
 rosrun turtlesim turtle_teleop_key
 ```
 
-![tuetle_move]()
+![tuetle_move](https://github.com/Offliners/ROS_Learning_Note/blob/main/Introduction/turtle_move.PNG)
 
 ## ROS Connection Method
 
-![connction]()
+![connction](https://github.com/Offliners/ROS_Learning_Note/blob/main/Introduction/ros_topic.png)
