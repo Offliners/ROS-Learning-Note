@@ -154,6 +154,16 @@ add_executable(roscpp_subscriber_exe src/roscpp_subscriber.cpp)
 target_link_libraries(roscpp_subscriber_exe ${catkin_LIBRARIES})
 ```
 
-![CMakeLists2]()
+![CMakeLists2](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/CMakeLists2.PNG)
+
+再來，開啟兩個終端機介面，同時執行Publisher和Subscriber
+
+![publisher_subscriber](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/publisher_subscriber.PNG)
 
 
+透過以下指令可以看到兩者間的關係
+```shell
+rqt_graph
+```
+
+![rqt_graph](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/rqt_graph.PNG)
