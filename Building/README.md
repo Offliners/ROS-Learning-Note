@@ -51,7 +51,7 @@ sudo apt-get update
 sudo apt-get install sublime-text-installer
 ```
 
-接著前往`test/scr`中來撰寫程式
+接著撰寫程式並存檔在`test/src`中
 * roscpp_publisher.cpp
 ```shell
 #include "ros/ros.h"
@@ -82,3 +82,26 @@ int main(int argc, char **argv)
 }
 ```
 [code](roscpp_publisher.cpp)
+
+接著更改test資料夾中的`CMakeLists.txt`在最下方加入此兩行
+```shell
+add_executable(roscpp_publisher_exe src/roscpp_publisher.cpp)
+target_link_libraries(roscpp_publisher_exe ${catkin_LIBRARIES})
+```
+
+![CMakeLists]()
+
+接著回到Worl Space
+```shell
+cd ~/catkin_ws                // 回到Work Sapce
+catkin_make                   // 重新編譯此Work Space
+```
+
+![catkin_make]()
+
+最後執行此程式
+```shell
+rosrun test roscpp_publisher_exe
+```
+
+![rosrun_publisher]()
