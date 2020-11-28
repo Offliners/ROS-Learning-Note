@@ -1,6 +1,13 @@
 # Building ROS Work Space
 
 ## 建立 Work Space
+啟動ROS
+```shell
+roscore
+```
+
+要使用ROS時要確認roscore是開啟的
+
 ```shell
 mkdir -p ~/catkin_ws/src          // 建立Work Space中的src資料夾
 cd ~/catkin_ws/                   // 前往Work Space資料夾
