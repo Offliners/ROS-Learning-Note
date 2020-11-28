@@ -13,6 +13,12 @@ source devel/setup.bash           // 選擇ROS要執行的Work Space
 sudo nano ~/.bashrc
 ```
 
-將`source ~/catkin_ws/devel/setup.bash`貼在上去
+將`source ~/catkin_ws/devel/setup.bash`貼在上去後`ctrl + o`並enter確定存檔後`ctrl + x`退出
 
 ![bashrc](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/bashrc.PNG)
+
+## 建立第一支ROS程式
+```shell
+cd src                                                                // 在此Work Space中前往src資料夾
+catkin_create_pkg test roscpp std_msgs actionlib actionlib_msgs       // 建立test資料夾並使用roscpp與加入需使用的函式庫
+```
