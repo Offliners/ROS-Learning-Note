@@ -21,4 +21,8 @@ sudo nano ~/.bashrc
 ```shell
 cd src                                                                // 在此Work Space中前往src資料夾
 catkin_create_pkg test roscpp std_msgs actionlib actionlib_msgs       // 建立test資料夾並使用roscpp與加入需使用的函式庫
+cd ..                                                                 // 回上一層
+catkin_make                                                           // 重新編譯Work Space讓環境知道新增加test資料夾
 ```
+
+![roscpp](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/roscpp.PNG)
