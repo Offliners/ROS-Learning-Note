@@ -18,4 +18,4 @@
 
 * Textbook
 
-  [Mastering ROS for Robotics Programming](https://github.com/Offliners/ROS_Learning_Note/blob/main/Textbook/Mastering%20ROS%20for%20Robotics%20Programming.pdf) (ISBN : 9781783551798)
+  [Mastering ROS for Robotics Programming (ISBN : 9781783551798)](https://github.com/Offliners/ROS_Learning_Note/blob/main/Textbook/Mastering%20ROS%20for%20Robotics%20Programming.pdf) 
