@@ -1,7 +1,8 @@
 # ROS Learning Note
 
 * [安裝ROS](http://wiki.ros.org/kinetic/Installation)
-* [ROS介紹](I)
+* [ROS介紹](Introduction/README.md)
+* [建立ROS Work Space](bulding/README.md)
 
 ## Work Space
 * `Ubuntu 16.04`
