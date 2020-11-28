@@ -15,4 +15,4 @@ sudo nano ~/.bashrc
 
 將`source ~/catkin_ws/devel/setup.bash`貼在上去
 
-![bashrc]()
+![bashrc](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/bashrc.PNG)
