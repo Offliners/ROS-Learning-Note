@@ -44,4 +44,41 @@ roscd test/
 ![roscd](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/roscd.PNG)
 
 ## 使用 ROSCPP 撰寫 Publisher
+安裝`sublime text 3`來撰寫ROSCPP
+```shell
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+```
 
+接著前往`test/scr`中來撰寫程式
+* roscpp_publisher.cpp
+```shell
+#include "ros/ros.h"
+#include "std_msgs/Int32.h"
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, "demo_topic_publisher");
+	ros::NodeHandle node_obj;
+	ros::Publisher number_publisher = node_obj.advertise<std_msgs::Int32>("/number", 10);
+	ros::Rate loop_rate(10);
+
+	int count = 0;
+	while(ros::ok())
+	{
+		std_msgs::Int32 msg;
+		msg.data = count;
+
+		ROS_INFO("%d", msg.data);
+		number_publisher.publish(msg);
+		ros::spinOnce();
+		loop_rate.sleep();
+		count++;
+	}
+
+	return 0;
+}
+```
+[code](roscpp_publisher.cpp)
