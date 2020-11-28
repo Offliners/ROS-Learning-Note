@@ -17,7 +17,7 @@ sudo nano ~/.bashrc
 
 ![bashrc](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/bashrc.PNG)
 
-## 建立第一支ROS程式
+## 在Work Space建立要執行的資料夾
 ```shell
 cd src                                                                // 在此Work Space中前往src資料夾
 catkin_create_pkg test roscpp std_msgs actionlib actionlib_msgs       // 建立test資料夾並使用roscpp與加入需使用的函式庫
@@ -27,3 +27,11 @@ catkin_make                                                           // 重新�
 ```
 
 ![roscpp](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/roscpp.PNG)
+
+若成功建立，則開新的terminal輸入
+```
+roscd test/
+```
+就可直接到此資料夾中
+
+## 使用 ROSCPP 撰寫 P
