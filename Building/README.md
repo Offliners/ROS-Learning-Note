@@ -62,7 +62,7 @@ int main(int argc, char **argv)
 {
 	ros::init(argc, argv, "demo_topic_publisher");
 	ros::NodeHandle node_obj;
-	ros::Publisher number_publisher = node_obj.advertise<std_msgs::Int32>("/number", 10);
+	ros::Publisher number_publisher = node_obj.advertise<std_msgs::Int32>("/numbers", 10);
 	ros::Rate loop_rate(10);
 
 	int count = 0;
@@ -82,6 +82,11 @@ int main(int argc, char **argv)
 }
 ```
 [code](roscpp_publisher.cpp)
+
+程式撰寫好後更改程式權限，改成可執行(字會從白色變綠色)
+```shell
+chmod +x roscpp_publisher.cpp
+```
 
 接著更改test資料夾中的`CMakeLists.txt`在最下方加入此兩行
 ```shell
@@ -109,7 +114,46 @@ rosrun test roscpp_publisher_exe
 ## 使用 ROSCPP 撰寫 Subscriber
 * roscpp_subscriber.cpp
 ```c++
+#include "ros/ros.h"
+#include "std_msgs/Int32.h"
+#include <iostream>
 
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, "demo_topic_publisher");
+	ros::NodeHandle node_obj;
+	ros::Publisher number_publisher = node_obj.advertise<std_msgs::Int32>("/numbers", 10);
+	ros::Rate loop_rate(10);
+
+	int count = 0;
+	while(ros::ok())
+	{
+		std_msgs::Int32 msg;
+		msg.data = count;
+
+		ROS_INFO("%d", msg.data);
+		number_publisher.publish(msg);
+		ros::spinOnce();
+		loop_rate.sleep();
+		count++;
+	}
+
+	return 0;
+}
 ```
 [code](roscpp_subscriber.cpp)
+
+程式撰寫好後更改程式權限，改成可執行(字會從白色變綠色)
+```shell
+chmod +x roscpp_subscriber.cpp
+```
+
+接著更改test資料夾中的`CMakeLists.txt`在最下方再加入此兩行
+```shell
+add_executable(roscpp_subscriber_exe src/roscpp_subscriber.cpp)
+target_link_libraries(roscpp_subscriber_exe ${catkin_LIBRARIES})
+```
+
+![CMakeLists2]()
+
 
