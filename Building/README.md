@@ -53,7 +53,7 @@ sudo apt-get install sublime-text-installer
 
 接著撰寫程式並存檔在`test/src`中
 * roscpp_publisher.cpp
-```shell
+```c++
 #include "ros/ros.h"
 #include "std_msgs/Int32.h"
 #include <iostream>
@@ -105,3 +105,11 @@ rosrun test roscpp_publisher_exe
 ```
 
 ![rosrun_publisher](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/rosrun_publisher.PNG)
+
+## 使用 ROSCPP 撰寫 Subscriber
+* roscpp_subscriber.cpp
+```c++
+
+```
+[code](roscpp_subscriber.cpp)
+
