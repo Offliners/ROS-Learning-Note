@@ -96,7 +96,7 @@ target_link_libraries(roscpp_publisher_exe ${catkin_LIBRARIES})
 
 ![CMakeLists](https://github.com/Offliners/ROS_Learning_Note/blob/main/Building/CMakeLists.PNG)
 
-接著回到Worl Space
+接著回到Work Space
 ```shell
 cd ~/catkin_ws                // 回到Work Sapce
 catkin_make                   // 重新編譯此Work Space
